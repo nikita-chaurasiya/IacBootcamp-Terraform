@@ -13,6 +13,8 @@ provider "aws" {
   region     = "ap-south-1"
 }
 
+
+# below code b is for direct run from vs to terraform cloud 
 #terraform { 
 #  cloud { 
 #   
@@ -23,3 +25,14 @@ provider "aws" {
 #    } 
 #  } 
 #}
+
+# code is used for new tag created for github and terraform cloud 
+terraform {
+  cloud {
+    organization = "nikita-work"
+    hostname = "app.terraform.io"
+    workspaces {
+      tags = ["nikita-ec2-all"]
+      }
+    }
+} 
