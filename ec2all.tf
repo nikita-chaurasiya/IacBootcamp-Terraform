@@ -76,3 +76,7 @@ resource "aws_instance" "vm1" {
 output "PublicIpAddress" {
   value = aws_instance.vm1.public_ip
 }
+
+resource "aws_s3_bucker" "nikitabucker"{
+  bucket = "nikitabukcers3bucker2oct"
+}
